@@ -1,0 +1,67 @@
+Blurum
+
+- accedere 
+- fare ricerca textbox
+- inserire il link
+
+
+
+
+Caso d'uso
+- fare ricerca con google
+
+v1:
+- umano fa ricerca su google
+- estensione prende il dato e la su blurum
+
+
+v2:
+- umano fa ricerca su google
+- script prende la ricerca effettuata nella textbox
+- estensione ricerca la stringa trovata su blurum 
+
+v3:
+- in background l'estensione apre una pagina blurum generando un iframe
+
+- umano fa ricerca su google
+- script prende la ricerca effettuata nella textbox
+- estensione ricerca la stringa trovata su google 
+
+v4:
+- in background l'estensione apre una pagina blurum generando un iframe
+
+- umano fa ricerca su google
+- script prende la ricerca effettuata nella textbox
+
+- script blurum invia richiesta a background dicendo che è stato inizializzato
+- spedisci da google a background
+
+- inviamo da background alla pagina dello script su blurum attraverso il callback di inizializzazione di blurum
+- script blurum trova la textbox e simulo l'inserimento sulla ricerca
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

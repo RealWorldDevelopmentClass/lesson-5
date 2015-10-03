@@ -1,0 +1,29 @@
+{
+  "name": "test ext",
+  "version": "10.10.12",
+  "manifest_version": 2,
+  "description": "",
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [    {
+      "matches": ["*://*.google.it/search*","*://*" ],
+      "js" : ["jquery.min.js","traduttore.js"],
+      "all_frames": true
+    }
+  ],
+  "content_scripts": [    {
+      "matches": ["*://*.wordreference.com*"],
+      "js" : ["jquery.min.js","wordReferenceBack.js"],
+      "all_frames": true
+    }
+  ],
+  "content_security_policy": "default-src 'self' https://*.wordreference.com; script-src 'self' ; frame-src 'self' https://*.wordreference.com; object-src 'self' https://*.wordreference.com; connect-src 'self' https://*.wordreference.com;",
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "webNavigation",
+    "webRequest"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "test ext",
+  "version": "10.10.12",
+  "manifest_version": 2,
+  "description": "",
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [    {
+      "matches": ["*://*.google.it/search*","*://*.google.com/search*","*://*.google.com/webhp*" ],
+      "js" : ["jquery.min.js","google.js"],
+      "all_frames": true
+    }
+  ],
+  "content_scripts": [    {
+      "matches": ["*://*.blurum.it/Web*"],
+      "js" : ["jquery.min.js","blurum.js"],
+      "all_frames": true
+    }
+  ],
+  "content_security_policy": "default-src 'self' https://*.blurum.it; script-src 'self' ; frame-src 'self' https://*.blurum.it; object-src 'self' https://*.blurum.it; connect-src 'self' https://*.blurum.it;",
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "webNavigation",
+    "webRequest"
+  ]
+}

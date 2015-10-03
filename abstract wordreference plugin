@@ -1,0 +1,18 @@
+Wordreference
+
+v1:
+- una volta selezionato il testo con una combinazione di tasto vedrò tip box con la traduzione
+
+v2:
+- background apre iframe di wordreference
+- script WR invia il messaggio con il callback che è stato inizializzato
+
+- l'utente selezionia il testo e preme la combinazione
+- lo script traduzione invia la parola a background
+- background invia tramite il callback inizializzato prima la parola selezionata
+- script WR invia la richiesta tramite la sua form con la parola ricevuta
+- script WR si re inizializza ma in una pagina con la traduzione
+- cerchi nel documento l'HTML della traduzione
+- script WR manda l'HTML trovato al background
+- background invia l'HTML allo script traduzione tramite il callback della richiesta che gli è stata fatta
+- si crea la tipbox
